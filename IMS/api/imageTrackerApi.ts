@@ -1,9 +1,10 @@
 import { imageTrackerService } from "../service/ImageTrackerService"
 
 class ImageTrackerApi {
-    public invoke = (req, res) => {
-        const result = imageTrackerService.invoke(req);
-        res.send(result);
+    public invoke = async(req, res) => {
+        const result = await imageTrackerService.invoke(req);
+        res.writeHead(200, {'ContentType': 'image/png' });
+        res.end(result,'binary');
     }
 }
 export const imageTrackerApi : any = new ImageTrackerApi();

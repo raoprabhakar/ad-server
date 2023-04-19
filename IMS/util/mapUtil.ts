@@ -1,8 +1,24 @@
+import * as fs from 'fs';
 
-    export const getImages = (zipCode) => {
-        const imageMapper = new Map();
-        imageMapper.set("75019",["../abc.gif"]);
-        return imageMapper.get(zipCode);
-    }
+const imageMapper ={
+    "75019":["//images//outlet_1.PNG"]
+};
+
+ let readImageData = async (imagePath)=> {
+     return fs.readFileSync(global.__basedir+imagePath);
+}
+export const getImages = async (zipCode) => {
+    return await new Promise((resolve,reject) => {
+        let imagePath = imageMapper[zipCode];
+        resolve(readImageData(imagePath));
+    });
+    
+}
+
+
+
+    
+
+    
 
 

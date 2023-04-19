@@ -8,6 +8,8 @@ const port = 9090;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+global.__basedir = __dirname;
+console.log(global.__basedir+'\\images\\outlet_1.PNG');
 app.use('/', mainRoute(router))
 
 app.listen(port, () => {

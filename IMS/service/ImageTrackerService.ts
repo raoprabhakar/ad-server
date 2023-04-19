@@ -1,8 +1,10 @@
 import { getImages } from '../util/mapUtil'
 class ImageTrackerService {
-    public invoke = (req) => {
-            let zipCode = req.body.zipCode;
-            return getImages(zipCode);
+    public invoke = async(req) => {
+        return await new Promise((resolve,reject) => {
+            let zipCode = req.body.zipCode || "75019";
+            resolve(getImages(zipCode));
+        });    
     }
 }
 
