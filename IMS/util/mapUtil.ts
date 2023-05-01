@@ -1,7 +1,8 @@
 import * as fs from 'fs';
 
 const imageMapper ={
-    "75019":["//images//outlet_1.PNG","//images//outlet_2.PNG","//images//outlet_1.PNG","//images//outlet_2.PNG"]
+    "75019":["//images//IMG_TRK_1.PNG","//images//IMG_TRK_2.PNG","//images//IMG_TRK_3.PNG","//images//IMG_TRK_5.PNG","//images//IMG_TRK_6.PNG","//images//IMG_TRK_7.PNG","//images//IMG_TRK_4.PNG","//images//IMG_TRK_8.PNG"],
+    "75063":["//images//IMG_TRK_11.PNG","//images//IMG_TRK_12.PNG","//images//IMG_TRK_13.PNG","//images//IMG_TRK_15.PNG","//images//IMG_TRK_16.PNG","//images//IMG_TRK_17.PNG","//images//IMG_TRK_14.PNG","//images//IMG_TRK_18.PNG"]
 };
 
  let readImageData = async (imagePath)=> {
